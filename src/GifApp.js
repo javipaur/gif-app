@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { AñadirCategoria } from './cpmponents/AñadirCategoria'
 
 export const GifApp = () => {
 
@@ -6,16 +7,17 @@ export const GifApp = () => {
 
  const [categorias, setCategorias] = useState(['Javier','Carlos','Luis'])
 
-const handleAdd= () => {
-  setCategorias([...categorias,'Pepinillos']);
+//const handleAdd= () => {
+  //setCategorias([...categorias,'Pepinillos']);
   //setCategorias(categorias =>[...categorias,'Pepe'])
-}
+//}
 
   return (
     <>
         <h2>GifApp</h2>
+        <AñadirCategoria setCategorias={setCategorias}/>
         <hr/>
-        <button onClick={handleAdd}>Insertar Categoria</button>
+        
         <ol>
          {
             categorias.map(categoria => {
