@@ -10,13 +10,13 @@ export const ListaGifs = ({ categoria }) => {
 
     return (
         <>
-            <h3>{categoria}</h3>   
+            <h3 className="animate__animated animate__fadeIn">{categoria}</h3>   
             {
 
-            loading && <p>Cargando</p>
+            loading && <p className='animate__animated animate__flash'>Cargando</p>
             
             }       
-             <div className='card-grid'>
+             <div className='card-grid animate__animated animate__fadeIn'>
                 {
                     imagenes.map(img => (
                         <GifItem

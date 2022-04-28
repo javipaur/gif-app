@@ -16,15 +16,13 @@ export const useFetchGifs = (categoria) => {
          //El then lo implementamos porque este metodo nos esta evolviendo una promesa.
          getGifs(categoria)
          .then(imgs=>{
-             setTimeout(()=>{
 
-                //console.log(imgs);
                 setState({
                     data:imgs,
                     loading:false
                 })
 
-             },3000);
+            
          })
 
      }, [categoria])
