@@ -15,17 +15,12 @@ export const useFetchGifs = (categoria) => {
          //Le pasamos la categoria para  hacer la busqueda especifica
          //El then lo implementamos porque este metodo nos esta evolviendo una promesa.
          getGifs(categoria)
-         .then(imgs=>{
-
-                setState({
-                    data:imgs,
-                    loading:false
+         .then(imgs=>
+                setState({data:imgs,loading:false
                 })
+         )
 
-            
-         })
-
-     }, [categoria])
+     }, [categoria]);
 
 
     return estado;
