@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { AñadirCategoria } from './cpmponents/AñadirCategoria'
+import { AñadirCategoria } from './components/AñadirCategoria'
+import { ListaGifs } from './components/ListaGifs'
 
 export const GifApp = () => {
 
   //const categorias =['Javier','Carlos','Luis']
 
- const [categorias, setCategorias] = useState(['Javier','Carlos','Luis'])
+ const [categorias, setCategorias] = useState(['One Punch'])
 
 //const handleAdd= () => {
   //setCategorias([...categorias,'Pepinillos']);
@@ -20,11 +21,13 @@ export const GifApp = () => {
         
         <ol>
          {
-            categorias.map(categoria => {
-                return <li key={categoria}> {categoria}</li>
-            })
-         }
-         
+            categorias.map(categoria => (
+                 <ListaGifs 
+                 key={categoria}
+                 categoria={categoria}/>
+        
+            ))
+          }   
         </ol>
     </>
   )

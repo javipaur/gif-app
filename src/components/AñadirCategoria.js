@@ -15,7 +15,10 @@ const handleSubmit=(e)=>{
 
     if(inputValue.trim().length>2){
            // console.log('Submit hecho!')
-   setCategorias(categorias=>[...setCategorias,inputValue]);
+   //Aqui  decidimos el orden en el que se mostraran los gifs segun las ultimas busquedas de categorias.        
+   setCategorias(categorias =>[inputValue,...categorias]);
+   //setCategorias([...setCategorias,inputValue]);
+   //Seteamos el input a valor ''
    seteInputValue('');
 
     }
